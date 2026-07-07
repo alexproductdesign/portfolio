@@ -1044,3 +1044,27 @@ a { color: inherit; text-decoration: none; }
   max-width: 46em;
 }
 .case-list li::marker { color: var(--ink); }
+
+/* not-live veil over a work card cover */
+.cover-veil {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(239, 237, 230, 0.6);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+.veil-pill {
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.grid-cover { position: relative; }
