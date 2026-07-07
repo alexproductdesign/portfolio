@@ -1,27 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
   <rect width="1200" height="900" fill="#EFEDE6"/>
 
-  <g transform="translate(0,-146)">
+  <g transform="translate(50,-150)">
 
-  <!-- base pill on the ground -->
-  <g transform="rotate(-2 600 712)">
-    <rect x="390" y="664" width="420" height="96" rx="48" fill="#ffffff" stroke="#e8e6e1" stroke-width="2"/>
-    <text x="600" y="728" text-anchor="middle" font-size="40" font-weight="500" fill="#101012">6% → 13%</text>
-  </g>
-
-  <!-- lime x2 pill leaning between the badge and the base pill -->
-  <g transform="rotate(22 708 596)">
-    <rect x="614" y="548" width="188" height="96" rx="48" fill="#E1FF53"/>
-    <text x="708" y="612" text-anchor="middle" font-size="44" font-weight="500" fill="#101012">×2</text>
-  </g>
-
-  <!-- growth chart badge resting on the base pill -->
+  <!-- growth chart badge on the ground -->
   <g>
-    <circle cx="540" cy="550" r="118" fill="#ffffff" stroke="#e8e6e1" stroke-width="2"/>
+    <circle cx="742" cy="642" r="118" fill="#ffffff" stroke="#e8e6e1" stroke-width="2"/>
     <g stroke="#101012" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M478 598 L520 546 L548 572 L598 510"/>
+      <path d="M680 690 L722 638 L750 664 L800 602"/>
     </g>
-    <circle cx="606" cy="502" r="11" fill="#101012"/>
+    <circle cx="808" cy="594" r="11" fill="#101012"/>
+  </g>
+
+  <!-- white pill leaning up against the badge like a ramp -->
+  <g transform="rotate(-12 430 669)">
+    <rect x="220" y="621" width="420" height="96" rx="48" fill="#ffffff" stroke="#e8e6e1" stroke-width="2"/>
+    <text x="430" y="685" text-anchor="middle" font-size="40" font-weight="500" fill="#101012">6% → 13%</text>
+  </g>
+
+  <!-- lime x2 perched on top of the badge -->
+  <g transform="rotate(-8 762 500)">
+    <rect x="668" y="452" width="188" height="96" rx="48" fill="#E1FF53"/>
+    <text x="762" y="516" text-anchor="middle" font-size="44" font-weight="500" fill="#101012">×2</text>
   </g>
 
   </g>
