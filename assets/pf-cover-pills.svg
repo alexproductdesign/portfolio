@@ -13,8 +13,8 @@
 
   <!-- x2 pill leaning against the tall bar -->
   <g transform="rotate(20 838 646)">
-    <rect x="763" y="606" width="150" height="80" rx="40" fill="#ffffff" stroke="#e8e6e1" stroke-width="2"/>
-    <text x="838" y="660" text-anchor="middle" font-size="36" font-weight="500" fill="#101012">×2</text>
+    <rect x="763" y="606" width="150" height="80" rx="40" fill="#101012"/>
+    <text x="838" y="660" text-anchor="middle" font-size="36" font-weight="500" fill="#FFFDF2">×2</text>
   </g>
 
   </g>
