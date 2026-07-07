@@ -465,6 +465,54 @@ a { color: inherit; text-decoration: none; }
   margin: 48px 0 16px;
 }
 
+/* "when I'm not designing" cards */
+.life-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.life-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  padding-bottom: 22px;
+}
+
+.life-card.is-wide { grid-column: 1 / -1; }
+
+.life-photo {
+  display: block;
+  aspect-ratio: 4 / 3;
+  background: repeating-linear-gradient(45deg, #f4f2ec 0 14px, #efede6 14px 28px);
+  overflow: hidden;
+}
+
+.life-card.is-wide .life-photo { aspect-ratio: 21 / 9; }
+
+.life-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.life-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 18px 22px 8px;
+}
+
+.life-card p {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  padding: 0 22px;
+  margin-bottom: 0;
+}
+
 .about-cta { margin-top: 56px; display: flex; align-items: center; gap: 10px; }
 
 .copy-email {
