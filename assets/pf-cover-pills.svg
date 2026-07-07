@@ -1,27 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
   <rect width="1200" height="900" fill="#EFEDE6"/>
 
-  <g transform="translate(50,-150)">
+  <g transform="translate(-80,-30)">
 
-  <!-- growth chart badge on the ground -->
-  <g>
-    <circle cx="742" cy="642" r="118" fill="#ffffff" stroke="#e8e6e1" stroke-width="2"/>
-    <g stroke="#101012" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M680 690 L722 638 L750 664 L800 602"/>
-    </g>
-    <circle cx="808" cy="594" r="11" fill="#101012"/>
-  </g>
+  <!-- short bar: 6% -->
+  <rect x="460" y="480" width="130" height="220" rx="65" fill="#ffffff" stroke="#e8e6e1" stroke-width="2"/>
+  <text x="525" y="560" text-anchor="middle" font-size="38" font-weight="500" fill="#101012">6%</text>
 
-  <!-- white pill leaning up against the badge like a ramp -->
-  <g transform="rotate(-12 430 669)">
-    <rect x="220" y="621" width="420" height="96" rx="48" fill="#ffffff" stroke="#e8e6e1" stroke-width="2"/>
-    <text x="430" y="685" text-anchor="middle" font-size="40" font-weight="500" fill="#101012">6% → 13%</text>
-  </g>
+  <!-- tall bar: 13% -->
+  <rect x="640" y="260" width="130" height="440" rx="65" fill="#E1FF53"/>
+  <text x="705" y="340" text-anchor="middle" font-size="38" font-weight="500" fill="#101012">13%</text>
 
-  <!-- lime x2 perched on top of the badge -->
-  <g transform="rotate(-8 762 500)">
-    <rect x="668" y="452" width="188" height="96" rx="48" fill="#E1FF53"/>
-    <text x="762" y="516" text-anchor="middle" font-size="44" font-weight="500" fill="#101012">×2</text>
+  <!-- x2 pill leaning against the tall bar -->
+  <g transform="rotate(20 838 646)">
+    <rect x="763" y="606" width="150" height="80" rx="40" fill="#ffffff" stroke="#e8e6e1" stroke-width="2"/>
+    <text x="838" y="660" text-anchor="middle" font-size="36" font-weight="500" fill="#101012">×2</text>
   </g>
 
   </g>
