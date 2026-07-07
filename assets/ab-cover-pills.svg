@@ -1,6 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
   <rect width="1200" height="900" fill="#EFEDE6"/>
 
+  <g transform="translate(0,-146)">
+
   <!-- base pill on the ground -->
   <g transform="rotate(-2 600 712)">
     <rect x="390" y="664" width="420" height="96" rx="48" fill="#ffffff" stroke="#e8e6e1" stroke-width="2"/>
@@ -23,5 +25,6 @@
       <path d="M592 496 l14 14"/>
       <path d="M540 562 L572 534"/>
     </g>
+  </g>
   </g>
 </svg>
