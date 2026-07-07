@@ -33,6 +33,34 @@
     }, { passive: true });
   }
 
+  // --- scroll reveal: hill, eyes and text ride up as footer enters ---
+  const footer = document.querySelector('.dome-footer');
+  if (footer && !reduced) {
+    const hill = footer.querySelector('.dome-bg');
+    const eyesWrap = footer.querySelector('.dome-eyes');
+    const content = footer.querySelector('.dome-content');
+    let ticking = null;
+
+    function reveal() {
+      ticking = null;
+      const r = footer.getBoundingClientRect();
+      const vh = window.innerHeight;
+      // 0 when the footer just peeks in, 1 when its top reaches ~1/4 of screen
+      const p = Math.min(1, Math.max(0, (vh - r.top) / (vh * 0.85)));
+      const e = 1 - Math.pow(1 - p, 3); // ease-out
+      const rise = (1 - e) * 300;
+      hill.style.transform = 'translateX(-50%) translateY(' + rise.toFixed(1) + 'px)';
+      eyesWrap.style.transform = 'translateY(' + rise.toFixed(1) + 'px)';
+      content.style.transform = 'translateY(' + (rise * 0.6).toFixed(1) + 'px)';
+      content.style.opacity = (0.15 + 0.85 * e).toFixed(2);
+    }
+
+    document.addEventListener('scroll', function () {
+      if (!ticking) ticking = requestAnimationFrame(reveal);
+    }, { passive: true });
+    reveal();
+  }
+
   // --- copy email ---
   document.querySelectorAll('.js-copy-email').forEach(function (btn) {
     btn.addEventListener('click', function () {

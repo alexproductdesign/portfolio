@@ -898,7 +898,7 @@ a { color: inherit; text-decoration: none; }
 
 .dome-bg {
   position: absolute;
-  top: 265px;
+  top: 151px;
   left: 50%;
   transform: translateX(-50%);
   width: 175vw;
@@ -942,10 +942,13 @@ a { color: inherit; text-decoration: none; }
   color: #ffffff;
 }
 
+.dome-bg, .dome-eyes, .dome-content { will-change: transform; }
+
 .dome-title {
-  font-size: clamp(30px, 4.5vw, 54px);
-  font-weight: 600;
+  font-size: clamp(26px, 3.6vw, 44px);
+  font-weight: 400;
   letter-spacing: -0.01em;
+  line-height: 1.25;
   margin-bottom: 30px;
 }
 
@@ -965,7 +968,7 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 860px) {
   .dome-footer { margin-top: 70px; padding-top: 60px; }
-  .dome-bg { top: 215px; }
+  .dome-bg { top: 106px; }
   .d-eye { width: 64px; height: 90px; }
   .d-pupil { width: 20px; height: 20px; margin: -10px 0 0 -10px; }
   .dome-content { margin-top: 130px; }
