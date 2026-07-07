@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="900" fill="#EFEDE6"/>
+
+  <!-- white pill: 2 weeks -> 2 days -->
+  <g transform="rotate(-3 300 742)">
+    <rect x="90" y="694" width="420" height="96" rx="48" fill="#ffffff" stroke="#e8e6e1" stroke-width="2"/>
+    <text x="300" y="758" text-anchor="middle" font-size="40" font-weight="500" fill="#101012">2 weeks → 2 days</text>
+  </g>
+
+  <!-- timer badge -->
+  <g>
+    <circle cx="660" cy="672" r="118" fill="#ffffff" stroke="#e8e6e1" stroke-width="2"/>
+    <!-- stopwatch glyph, thin stroke like nav icons -->
+    <g stroke="#101012" stroke-width="8" fill="none" stroke-linecap="round">
+      <circle cx="660" cy="684" r="58"/>
+      <path d="M645 604 h30"/>
+      <path d="M660 604 v14"/>
+      <path d="M712 618 l14 14"/>
+      <path d="M660 684 L692 656"/>
+    </g>
+  </g>
+
+  <!-- lime pill x7, leaning on the timer -->
+  <g transform="rotate(-14 852 716)">
+    <rect x="758" y="668" width="188" height="96" rx="48" fill="#E1FF53"/>
+    <text x="852" y="732" text-anchor="middle" font-size="44" font-weight="500" fill="#101012">×7</text>
+  </g>
+</svg>
