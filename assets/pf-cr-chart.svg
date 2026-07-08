@@ -16,16 +16,15 @@
   </g>
 
   <!-- area -->
-  <path d="M120,420 L360,392 L600,308 L840,224 L1080,150 L1080,470 L120,470 Z" fill="#E1FF53" opacity="0.35"/>
+  <path d="M120,420 L440,372 L760,262 L1080,150 L1080,470 L120,470 Z" fill="#E1FF53" opacity="0.35"/>
   <!-- line -->
-  <path d="M120,420 L360,392 L600,308 L840,224 L1080,150" fill="none" stroke="#101012" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M120,420 L440,372 L760,262 L1080,150" fill="none" stroke="#101012" stroke-width="2.5" stroke-linejoin="round"/>
 
   <!-- points -->
   <g fill="#101012">
     <circle cx="120" cy="420" r="5"/>
-    <circle cx="360" cy="392" r="5"/>
-    <circle cx="600" cy="308" r="5"/>
-    <circle cx="840" cy="224" r="5"/>
+    <circle cx="440" cy="372" r="5"/>
+    <circle cx="760" cy="262" r="5"/>
   </g>
   <circle cx="1080" cy="150" r="8" fill="#E1FF53" stroke="#101012" stroke-width="2.5"/>
 
@@ -33,10 +32,9 @@
   <text x="1080" y="126" text-anchor="end" font-size="20" fill="#101012" font-weight="600">~13%</text>
 
   <g font-size="12.5" fill="#8a8a90">
-    <text x="120" y="452" text-anchor="middle">2022</text>
-    <text x="360" y="452" text-anchor="middle">2023</text>
-    <text x="600" y="452" text-anchor="middle">2024</text>
-    <text x="840" y="452" text-anchor="middle">2025</text>
+    <text x="120" y="452" text-anchor="middle">2023</text>
+    <text x="440" y="452" text-anchor="middle">2024</text>
+    <text x="760" y="452" text-anchor="middle">2025</text>
     <text x="1080" y="452" text-anchor="middle">2026</text>
   </g>
 
