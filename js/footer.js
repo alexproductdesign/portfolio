@@ -64,12 +64,17 @@
   // --- copy email ---
   document.querySelectorAll('.js-copy-email').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      navigator.clipboard.writeText(btn.dataset.email).then(function () {
-        const node = btn.childNodes[0];
-        const original = node.textContent;
-        node.textContent = 'Copied! ';
-        setTimeout(function () { node.textContent = original; }, 1500);
-      });
+      // visual feedback fires on click, independent of clipboard permission
+      const node = btn.childNodes[0];
+      const original = node.textContent;
+      node.textContent = 'Copied! ';
+      setTimeout(function () { node.textContent = original; }, 1500);
+      const wrap = document.querySelector('.dome-eyes');
+      if (wrap) {
+        wrap.classList.add('is-blinking');
+        setTimeout(function () { wrap.classList.remove('is-blinking'); }, 460);
+      }
+      try { navigator.clipboard && navigator.clipboard.writeText(btn.dataset.email); } catch (e) {}
     });
   });
 })();

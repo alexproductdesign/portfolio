@@ -1152,3 +1152,125 @@ a { color: inherit; text-decoration: none; }
 }
 .view-tip.is-visible { opacity: 1; transform: translateY(0); }
 .view-tip svg { width: 22px; height: 22px; display: block; }
+
+/* scrollable table strip (e.g. the experiment library) */
+.table-scroll { margin: 40px 0 0; }
+.table-scroll-frame {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+.table-scroll-viewport {
+  max-height: 520px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.table-scroll-viewport img { display: block; width: 100%; height: auto; }
+
+/* visible scrollbar so it reads as scrollable */
+.table-scroll-viewport::-webkit-scrollbar { width: 12px; }
+.table-scroll-viewport::-webkit-scrollbar-track { background: #f4f2ec; }
+.table-scroll-viewport::-webkit-scrollbar-thumb {
+  background: #cfccc2;
+  border-radius: 6px;
+  border: 3px solid #f4f2ec;
+}
+.table-scroll-viewport { scrollbar-color: #cfccc2 #f4f2ec; }
+
+/* "Scroll ↓" cue, fades out once scrolling starts */
+.scroll-cue {
+  position: absolute;
+  left: 50%; bottom: 16px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: #E1FF53;
+  color: #101012;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 3px 12px rgba(16,16,18,0.14);
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s;
+}
+.scroll-cue svg { width: 14px; height: 14px; }
+.table-scroll-frame.is-scrolled .scroll-cue { opacity: 0; transform: translate(-50%, 8px); }
+
+.table-scroll figcaption {
+  margin-top: 12px;
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.theme-ivory .table-scroll-frame { border-color: #ece9e1; }
+
+/* native experiment table inside the scroll frame */
+.exp-table { width: 100%; border-collapse: collapse; font-size: 14px; background: #fff; }
+.exp-table thead th {
+  position: sticky; top: 0; z-index: 1;
+  background: #faf9f6;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-soft); font-weight: 500;
+  padding: 14px 18px;
+  border-bottom: 1px solid #ece9e1;
+}
+.exp-table td { padding: 13px 18px; border-bottom: 1px solid #f1efe9; vertical-align: top; }
+.exp-table tr:last-child td { border-bottom: none; }
+.exp-table .c-num { color: #b0ada4; font-variant-numeric: tabular-nums; width: 44px; }
+.exp-table .c-exp { width: 60%; }
+.exp-name { display: block; color: var(--ink); }
+.exp-pattern { display: block; margin-top: 3px; font-size: 12px; color: #9a978f; }
+.st, .res {
+  display: inline-block; padding: 4px 11px; border-radius: 999px;
+  font-size: 12.5px; white-space: nowrap;
+}
+.st-done { background: #edeaf7; color: #4b3f7a; }
+.st-stop { background: #fbe1e6; color: #a23; }
+.st-prog { background: #dcefff; color: #245; }
+.st-plan { background: #fff2cf; color: #7a5a12; }
+.st-dev  { background: #d8f5e4; color: #1c6b42; }
+.res-none { color: #cfccc2; }
+.res.rs-win  { background: #E1FF53; color: #101012; font-weight: 500; }
+.res.rs-loss { background: #101012; color: #fff; }
+.res.rs-eq   { background: #eceae4; color: #6b6b70; }
+
+/* ============ motion: reveal / wipe / underline / blink ============ */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s cubic-bezier(0.22,0.61,0.36,1), transform 0.6s cubic-bezier(0.22,0.61,0.36,1); }
+.reveal.is-in { opacity: 1; transform: none; }
+
+/* chart draw-on wipes (applied to <img data-anim="...">) */
+[data-anim="wipe-lr"] { clip-path: inset(0 100% 0 0); transition: clip-path 1.1s cubic-bezier(0.22,0.61,0.36,1); }
+[data-anim="wipe-lr"].anim-run { clip-path: inset(0 0 0 0); }
+[data-anim="wipe-up"] { clip-path: inset(100% 0 0 0); transition: clip-path 1s cubic-bezier(0.22,0.61,0.36,1); }
+[data-anim="wipe-up"].anim-run { clip-path: inset(0 0 0 0); }
+
+/* growing underline on text links */
+.link-underline, .case-next-name, .case-body a, .about-body a:not(.icon-button) {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1.5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.35s cubic-bezier(0.22,0.61,0.36,1);
+  padding-bottom: 1px;
+}
+.link-underline:hover, .case-next:hover .case-next-name,
+.case-body a:hover, .about-body a:not(.icon-button):hover { background-size: 100% 1.5px; }
+
+/* footer eyes blink on copy */
+@keyframes eye-blink { 0%,100% { transform: scaleY(1); } 45%,55% { transform: scaleY(0.12); } }
+.dome-eyes.is-blinking .d-eye { animation: eye-blink 0.42s ease; transform-origin: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; }
+  [data-anim] { clip-path: none !important; }
+  .dome-eyes.is-blinking .d-eye { animation: none; }
+}
