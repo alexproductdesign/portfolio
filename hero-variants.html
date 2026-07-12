@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero variants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: "Overused Grotesk";
+      src: url("fonts/OverusedGrotesk-VF.woff2") format("woff2-variations");
+      font-weight: 100 900;
+      font-display: swap;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #FAF9F6; color: #101012; font-family: "Overused Grotesk", system-ui, sans-serif; }
+    .v {
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 64px;
+      border-bottom: 1px dashed #d8d5cc;
+      position: relative;
+    }
+    .tag {
+      position: absolute;
+      top: 28px;
+      left: 64px;
+      font-size: 13px;
+      color: #9a978e;
+      font-weight: 500;
+    }
+    em { font-family: "IBM Plex Serif", Georgia, serif; font-style: italic; font-weight: 400; }
+
+    /* V1 — greeting + one sharp line (Eric) */
+    .v1 h1 { font-weight: 500; font-size: clamp(56px, 7.5vw, 118px); letter-spacing: -0.025em; line-height: 1; }
+    .v1 p { margin-top: 22px; font-weight: 400; font-size: clamp(28px, 3.4vw, 52px); letter-spacing: -0.015em; line-height: 1.15; color: #6b6b70; }
+    .v1 em { font-weight: 300; }
+
+    /* V2 — display name + two lines, second in color (Charles) */
+    .v2 h1 { font-weight: 450; font-size: clamp(64px, 8.5vw, 132px); letter-spacing: -0.03em; line-height: 0.98; }
+    .v2 .l1 { margin-top: 40px; font-size: clamp(22px, 2.4vw, 36px); font-weight: 400; letter-spacing: -0.01em; }
+    .v2 .l2 { margin-top: 6px; font-size: clamp(22px, 2.4vw, 36px); font-weight: 400; letter-spacing: -0.01em; color: #8a76c9; }
+
+    /* V3 — tiny hello + big statement (Daniella), centered */
+    .v3 { align-items: center; text-align: center; }
+    .v3 .hello { font-size: clamp(19px, 1.8vw, 26px); color: #6b6b70; font-weight: 450; }
+    .v3 h1 { margin-top: 18px; font-weight: 450; font-size: clamp(60px, 8vw, 124px); letter-spacing: -0.028em; line-height: 1.02; }
+    .v3 p { margin-top: 26px; font-size: clamp(20px, 1.9vw, 28px); color: #6b6b70; font-weight: 400; max-width: 640px; line-height: 1.5; }
+
+    /* V4 — current sentence, but with hierarchy */
+    .v4 h1 { font-weight: 550; font-size: clamp(58px, 7.8vw, 122px); letter-spacing: -0.025em; line-height: 1; }
+    .v4 p { margin-top: 20px; font-weight: 400; font-size: clamp(26px, 3vw, 46px); letter-spacing: -0.015em; line-height: 1.2; color: #26262b; }
+  </style>
+</head>
+<body>
+
+  <section class="v v1">
+    <p class="tag">Variant 1 · greeting + one line</p>
+    <h1>Hi, I'm Alex.</h1>
+    <p>Product designer. Evidence first, <em>pixels</em> second.</p>
+  </section>
+
+  <section class="v v2">
+    <p class="tag">Variant 2 · display name + two lines</p>
+    <h1>Alexandra<br>Rott</h1>
+    <p class="l1">Senior product designer from Berlin.</p>
+    <p class="l2">I take products from first research to <em>post-launch</em> numbers.</p>
+  </section>
+
+  <section class="v v3">
+    <p class="tag">Variant 3 · big centered statement</p>
+    <p class="hello">Hi, I'm Alex</p>
+    <h1>Design that<br><em>proves</em> itself.</h1>
+    <p>Product designer at Trusted Shops, Berlin. Research, prototypes, A/B tests – and the numbers after launch.</p>
+  </section>
+
+  <section class="v v4">
+    <p class="tag">Variant 4 · current copy, two sizes</p>
+    <h1>Alexandra Rott.</h1>
+    <p>Product <em>design</em> from first research<br>to post-launch numbers.</p>
+  </section>
+
+</body>
+</html>

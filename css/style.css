@@ -1155,7 +1155,7 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(239, 237, 230, 0.6);
+  background: rgba(242, 241, 238, 0.62);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
